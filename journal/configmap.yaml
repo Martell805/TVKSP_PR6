@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: journal-config
+data:
+  journalEntries: "10"

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fileserver-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fileserver
+  template:
+    metadata:
+      labels:
+        app: fileserver
+    spec:
+      containers:
+      - name: fileserver
+        image: nginx:latest
+        ports:
+        - containerPort: 80
